@@ -1,0 +1,9 @@
+﻿{
+  "agentId": 2,
+  "agentName": "Os-MacBook-Pro",
+  "poolId": 1,
+  "poolName": "Default",
+  "serverUrl": "https://pipelinesghubeus5.actions.githubusercontent.com/4ctPkkyfzXjhLxgs8zQZE80ZE2OxK1TujjxhhyQxjb3NTPEhwk/",
+  "gitHubUrl": "https://github.com/chiragjodhani/quoteMinimal",
+  "workFolder": "quoteminimal"
+}
