@@ -24,6 +24,7 @@
     "deploy:production": "heroku pipelines:promote -a quotable-api-staging",
     "prepare": "husky install"
   },
+  "type": "module",
   "dependencies": {
     "chalk": "^5.0.1",
     "cors": "^2.8.5",
@@ -34,8 +35,9 @@
     "lodash-es": "^4.17.21",
     "mongodb": "^4.7.0",
     "mongoose": "^6.4.0",
+    "node-fetch": "^2.6.1",
     "query-string": "^7.1.1",
-    "shortid": "^2.2.15"
+    "shortid": "^2.2.8"
   },
   "devDependencies": {
     "@babel/core": "^7.18.5",
