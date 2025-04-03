@@ -1,8 +1,8 @@
 #!/bin/bash
 
-SVC_NAME="actions.runner.chiragjodhani-quoteMinimal.Os-MacBook-Pro"
+SVC_NAME="actions.runner.chaturj-quotesApi.quoteApi"
 SVC_NAME=${SVC_NAME// /_}
-SVC_DESCRIPTION="GitHub Actions Runner (chiragjodhani-quoteMinimal.Os-MacBook-Pro)"
+SVC_DESCRIPTION="GitHub Actions Runner (chaturj-quotesApi.quoteApi)"
 
 user_id=`id -u`
 

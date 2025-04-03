@@ -10,7 +10,7 @@ There is a rate limit of **180 requests per minute**, per IP address. If you exc
 
 ### API Servers
 ```
-https://api.quotable.io
+https://quotes-api-git-main-chaturjs-projects.vercel.app
 ```
 
 ### Postman
@@ -646,3 +646,4 @@ Get a list of all tags
   }>
 }
 ```
+# quotesApi

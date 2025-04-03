@@ -23,7 +23,7 @@ export default async function getQuoteById(req, res, next) {
     const { id } = req.params
     const result = await quotesArray.filter(function(e, i) {
   return e['_id'] == id
-})
+})//Quotes.findById(id).select('-__v -authorId')
 
     if (!result) {
       return next(createError(404, 'The requested resource could not be found'))
