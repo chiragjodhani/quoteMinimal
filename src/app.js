@@ -10,7 +10,7 @@ app.use(limiter)
 app.set('trust proxy', 1)
 // Redirect the root URL to the github repository
 app.get('/', (req, res) => {
-  res.redirect('https://github.com/chaturj/quotesApi')
+  res.redirect('https://github.com/chiragjodhani/quoteMinimal.git')
 })
 app.use(routes)
 app.use(handle404)
