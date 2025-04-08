@@ -1,6 +1,5 @@
 import { Router } from 'express'
 import createError from 'http-errors'
-import addQuotes from './controllers/quotes/addQuotes.js'
 import listQuotes from './controllers/quotes/listQuotes.js'
 import getQuoteById from './controllers/quotes/getQuoteById.js'
 import searchQuotes from './controllers/search/searchQuotes.js'
@@ -27,7 +26,6 @@ router.get('/random', singleRandomQuote)
 
 router.get('/quotes', listQuotes)
 router.get('/quotes/:id', getQuoteById)
-router.post('/addQuotes',addQuotes)
 
 /**------------------------------------------------
  ** Authors

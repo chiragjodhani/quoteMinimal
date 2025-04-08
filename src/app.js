@@ -5,7 +5,6 @@ import { handle404, logErrors, handleErrors } from './handleErrors.js'
 import limiter from './rateLimit.js'
 /** The Express app */
 const app = express()
-app.use(express.json());
 app.use(cors())
 app.use(limiter)
 app.set('trust proxy', 1)

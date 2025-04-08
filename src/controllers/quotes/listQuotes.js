@@ -24,9 +24,9 @@ export default async function listQuotes(req, res) {
         const quotesArray = quotes['results']
         // Select a random quote
         //const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
-        const sortQuotes = quotesArray.sort((a, b) => new Date(b.dateModified) - new Date(a.dateModified));
+        
         if (author) {
-            const result = await sortQuotes.filter(function(e, i) {
+            const result = await quotesArray.filter(function(e, i) {
                 return e['authorSlug'] == author
             })
             const page = parseInt(req.query.page, 10) || 1;
@@ -50,7 +50,7 @@ export default async function listQuotes(req, res) {
                 items: paginatedItems,
             });
         }else if (tags) {
-            const filteredQuotes = sortQuotes.filter(val => val.tags.includes(tags));
+            const filteredQuotes = quotesArray.filter(val => val.tags.includes(tags));
             /*await quotesArray.filter(function(e, i) {
                             return e['tags'] == tags
                         })*/
@@ -84,15 +84,15 @@ export default async function listQuotes(req, res) {
             const endIndex = page * limit;
             
             // Paginated items
-            const paginatedItems = sortQuotes.slice(startIndex, endIndex);
+            const paginatedItems = quotesArray.slice(startIndex, endIndex);
             
             // Total pages
-            const totalPages = Math.ceil(sortQuotes.length / limit);
+            const totalPages = Math.ceil(quotesArray.length / limit);
             
             res.json({
                 page,
                 limit,
-                totalItems: sortQuotes.length,
+                totalItems: quotesArray.length,
                 totalPages,
                 items: paginatedItems,
             });
